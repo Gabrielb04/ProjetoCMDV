@@ -1,16 +1,107 @@
-
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Projeto CMDV</title>
-      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
-    </head>
-
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="pt-BR" />
+    <meta name="language" content="Portuguese" />
+    <meta name="description" content="Sistema de Carteira Digital de Manutenção Veicular - Gerencie a manutenção do seu veículo de forma inteligente" />
+    <meta name="keywords" content="manutenção veicular, carteira digital, controle de manutenção, alertas automotivos, gestão de peças, serviços automotivos" />
+    <meta name="author" content="Sistema de Manutenção Veicular" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Carteira Digital de Manutenção Veicular" />
+    <meta property="og:description" content="Sistema completo para controle e gestão da manutenção do seu veículo" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Carteira Digital de Manutenção Veicular" />
+    <meta property="twitter:description" content="Sistema completo para controle e gestão da manutenção do seu veículo" />
+    
+    <title>Carteira Digital de Manutenção Veicular</title>
+    
+    <!-- Fonts and Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <style>
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      /* Loading styles */
+      .loading-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        gap: 1rem;
+      }
+      
+      .loading-spinner {
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid #e5e7eb;
+        border-top: 2px solid #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      
+      .loading-text {
+        color: #6b7280;
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Script para aplicar tema imediatamente e evitar flash -->
+    <script>
+      (function() {
+        // Verificar tema salvo no localStorage
+        const savedTheme = localStorage.getItem('theme');
+        
+        // Por padrão usar tema claro se não há preferência salva
+        const theme = savedTheme || 'light';
+        
+        // Se não há tema salvo, salvar o padrão (claro)
+        if (!savedTheme) {
+          localStorage.setItem('theme', 'light');
+        }
+        
+        // Aplicar classe dark se necessário
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+    <div id="root">
+      <!-- Fallback loading content -->
+      <div class="loading-container">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Carregando sistema de manutenção...</div>
+      </div>
+    </div>
+    
+    <!-- React App Script -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
