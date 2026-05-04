@@ -5,8 +5,6 @@ Sistema de gerenciamento de manutenção veicular mobile-first desenvolvido como
 ## ✨ Destaques do Projeto
 
 - 🏗️ **Arquitetura Moderna**: Separação entre camada de app e features com Clean Architecture
-- 🎣 **6 Custom Hooks**: Lógica de negócio isolada e reutilizável
-- 📦 **Código Ultra Limpo**: App.tsx com apenas 8 linhas (-99.2% de redução)
 - 🔄 **100% Funcional**: Offline (localStorage) e Online (Supabase) com sincronização automática
 - 🎨 **shadcn/ui + Tailwind v4**: Interface moderna e consistente
 - 📱 **Mobile-First**: Otimizado para dispositivos móveis
@@ -66,19 +64,6 @@ Sistema de gerenciamento de manutenção veicular mobile-first desenvolvido como
 ├── supabase/               # Backend e funções serverless
 └── index.html              # HTML raiz
 ```
-
-## 🎣 Custom Hooks
-
-O projeto utiliza 6 hooks personalizados para separar lógica de apresentação:
-
-1. **useAuth()** - Gerencia autenticação de usuários
-2. **useVehicles()** - Gerencia veículos do usuário
-3. **useMaintenance()** - Gerencia itens e histórico de manutenção
-4. **useNavigation()** - Gerencia navegação entre telas
-5. **useAppHandlers()** - Centraliza todos os event handlers
-6. **useAppEffects()** - Centraliza efeitos colaterais (metadata, sincronização)
-
-Ver [QUICK_START.md](./docs/QUICK_START.md) para detalhes de uso.
 
 ## 🛠️ Tecnologias
 
@@ -199,44 +184,14 @@ npm run lint
 npm run build
 ```
 
-## 🤝 Contribuindo
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. Push para a branch (`git push origin feature/MinhaFeature`)
-5. Abra um Pull Request
-
-Ver [CONTRIBUTING.md](./docs/CONTRIBUTING.md) para mais detalhes.
-
 ## 📄 Licença
 
 Projeto acadêmico desenvolvido na Faculdade Senac Ceará.
+
 
 ---
 
 **Desenvolvido com ❤️ para facilitar o controle de manutenção veicular**
 
-## 🏆 Status do Projeto
 
-✅ **Refatoração Completa** - Código limpo, organizado e pronto para produção  
-✅ **6 Custom Hooks** - Lógica de negócio isolada  
-✅ **Arquitetura por Features** - Escalável e manutenível  
-✅ **Documentação Completa** - 17 documentos com guias e exemplos  
-✅ **100% Funcional** - Testado e validado  
-✅ **Configuração Profissional** - Package.json, ESLint, Prettier, TypeScript  
-✅ **Zero Dívida Técnica** - Código pronto para produção
-
-## 📚 Documentação
-
-Para acesso completo a toda documentação, veja o **[📖 Índice de Documentação](./docs/INDEX.md)**
-
-### Documentos Principais
-
-- 📖 [Guia de Instalação](./docs/INSTALLATION.md) - Instalação em 3 passos (5 min)
-- 📖 [Guia Rápido](./docs/QUICK_START.md) - Como usar os hooks e adicionar features
-- 🏗️ [Arquitetura](./docs/ARCHITECTURE.md) - Estrutura detalhada do projeto
-- 🎣 [Guia de Hooks](./docs/HOOKS_USAGE_GUIDE.md) - Uso detalhado dos hooks
-- 🤝 [Contribuição](./docs/CONTRIBUTING.md) - Como contribuir
-- ✅ [Testes](./docs/TESTING_CHECKLIST.md) - Checklist de testes
-- 📊 [Status Final](./docs/PROJECT_FINAL_STATUS.md) - Visão geral completa
+---
